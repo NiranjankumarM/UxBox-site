@@ -1,0 +1,22 @@
+{
+  "name": "uxbox-website",
+  "version": "1.0.0",
+  "description": "Uxbox is an company that handles all the front end and ux-ui requirements. The site contains all the details of the services provided and the portfolio of all the works done so far.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Niranjan",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-clean-css": "^2.0.13",
+    "gulp-jshint": "^2.0.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.1.1",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.10",
+    "jshint": "^2.9.3"
+  }
+}
