@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>UXBOX</title>
+        <meta name="title" content="">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <link rel="stylesheet" type="text/css" href="dist/stylesheets/min_css/index.css"/>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="dist/min_js/slide.js"></script>
+
+        <script>
+            (function(window, $) {
+
+                $(function() {
+
+                    $('.butstart').on('click', function(event) {
+                        event.preventDefault();
+
+                        var $div = $('<div/>'),
+                            btnOffset = $(this).offset(),
+                            xPos = event.pageX - btnOffset.left,
+                            yPos = event.pageY - btnOffset.top;
+
+                        $div.addClass('ripple-effect');
+                        var $butstart = $(".ripple-effect");
+
+                        $butstart.css("height", $(this).height());
+                        $butstart.css("width", $(this).height());
+                        $div.css({
+                            top: yPos - ($butstart.height() / 2),
+                            left: xPos - ($butstart.width() / 2),
+                            background: $(this).data("ripple-color")
+                        }).appendTo($(this));
+
+                        window.setTimeout(function() {
+                            $div.remove();
+                        }, 2000);
+                    });
+
+                });
+
+            })(window, jQuery);
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav class="menu-header">
+                <div class="logo">
+                    <img href="index.html" src="media/UX-logo.png" alt="UX-BoX"/>
+                    <ul class="menus">
+                        <li>
+                            <button class="butstart" data-ripple-color="#9cc4f2" id="onclick">START PROJECT</button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <section>
+            <div id="wrapper-main">
+                <div class="left-column ux-6">
+                    <div class="content-holder">
+                    <div class="txt-content-one slide">
+                                <h2>UI<span class="and">&</span><span class="ui">UX</span></h2>
+                                <h1>Design</h1>
+                                <h3>Web | Mobile App</h3>
+                            </div>
+                            <div class="txt-content-two slide">
+                                <h2>Look<span class="feel">.Feel.</span>
+                                </h2>
+                                <h1>Work</h1>
+                                <h3>Design is so simple.</h3>
+                            </div>
+
+                    </div>
+                    <div class="navig">
+                        <div id="icon1" class="icon1"></div>
+                        <div id="icon2" class="icon2"></div>
+                    </div>
+                </div>
+                <div class="right-column ux-6">
+
+                  <div class="nona-container">
+                    <img src="media/nonagon.png" alt="mesh" />
+                  </div>
+
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
